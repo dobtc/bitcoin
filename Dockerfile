@@ -13,8 +13,6 @@ RUN groupadd --gid ${GID} bitcoin \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ARG BUILD_RUN=0
-ARG BUILD_DATE=""
 ARG TARGETPLATFORM
 
 ARG BITCOIN_RC
@@ -24,13 +22,7 @@ ARG BITCOIN_BASE=${BITCOIN_VERSION}${BITCOIN_RC}
 ENV BITCOIN_DATA=/home/bitcoin/.bitcoin
 ENV PATH=/opt/bitcoin-${BITCOIN_BASE}/bin:$PATH
 
-LABEL org.opencontainers.image.licenses="MIT"
 LABEL org.opencontainers.image.title="Bitcoin Core"
-LABEL org.opencontainers.image.created=${BUILD_DATE}
-LABEL org.opencontainers.image.revision=${BUILD_RUN}
-LABEL org.opencontainers.image.version=${BITCOIN_BASE}
-LABEL org.opencontainers.image.source="https://github.com/dobtc/docker-bitcoin/"
-LABEL org.opencontainers.image.url="https://hub.docker.com/r/dobtc/docker-bitcoin/"
 LABEL org.opencontainers.image.description="Bitcoin Core docker image"
 
 SHELL ["/bin/bash", "-c"]
