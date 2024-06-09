@@ -115,7 +115,7 @@ jobs:
           fetch-depth: 0
       - 
         name: Lint Dockerfile
-        if: env.exists == 'false'
+        if: env.exists == 'disabled'
         uses: hadolint/hadolint-action@v3.1.0
         with:
           dockerfile: Dockerfile
