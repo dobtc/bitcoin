@@ -60,7 +60,7 @@ EXPOSE 8332 18332 18443
 # ZMQ ports (for transactions & blocks respectively)
 EXPOSE 28332 28333
 
-HEALTHCHECK --interval=300s --start-period=60s --start-interval=10s --timeout=20s CMD bitcoin-cli -rpcwait -getinfo || exit 1
+HEALTHCHECK --interval=300s --start-period=60s --start-interval=10s --timeout=20s CMD gosu bitcoin bitcoin-cli -rpcwait -getinfo || exit 1
 
 ENTRYPOINT ["/entrypoint.sh"]
 
