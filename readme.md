@@ -17,7 +17,7 @@ A docker image of Bitcoin Core with support for the following platforms:
 * `arm32v7` (armv7)
 * `arm64` (aarch64, armv8)
 
-## Usage
+## Usage  🐳
 
 Via Docker Compose:
 
@@ -45,7 +45,7 @@ Executing `getinfo` on the running container:
 docker exec --user bitcoin bitcoin bitcoin-cli -getinfo
 ```
 
-## Stars
+## Stars 🌟
 [![Stars](https://starchart.cc/dobtc/bitcoin.svg?variant=adaptive)](https://starchart.cc/dobtc/bitcoin)
 
 [build_url]: https://github.com/dobtc/bitcoin/
