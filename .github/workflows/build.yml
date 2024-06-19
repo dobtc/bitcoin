@@ -41,7 +41,7 @@ jobs:
         run: |
           #!/bin/bash
           latest_tag=$(echo '${{ steps.latest_tag.outputs.data }}' | jq '.repository.refs.edges[][].name' -r)
-          latest_tag="27.1"
+          #latest_tag="27.1"
           [ -z "$latest_tag" ] && echo "Tag not found!" && exit 1
           [[ "$latest_tag" == "null" ]] && echo "Tag not found!" && exit 1
           [[ "$latest_tag" = v* ]] && latest_tag="${latest_tag:1}"
