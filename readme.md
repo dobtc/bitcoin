@@ -58,4 +58,5 @@ docker exec --user bitcoin bitcoin bitcoin-cli -getinfo
 [Size]: https://img.shields.io/docker/image-size/dobtc/bitcoin/latest?color=066da5&label=size
 [Pulls]: https://img.shields.io/docker/pulls/dobtc/bitcoin.svg?style=flat&label=pulls&logo=docker
 [Version]: https://img.shields.io/docker/v/dobtc/bitcoin/latest?arch=amd64&sort=semver&color=066da5
-[Package]: https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fipitio%2Fghcr-pulls%2Fmaster%2Findex.json&query=%24%5B%3F(%40.owner%3D%3D%22dobtc%22%20%26%26%20%40.repo%3D%3D%22bitcoin%22%20%26%26%20%40.image%3D%3D%22bitcoin%22)%5D.pulls&logo=github&style=flat&color=066da5&label=pulls
+[Package]: 
+https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fipitio%2Fbackage%2Fmaster%2Findex%2Fdobtc%2Fbitcoin%2Fbitcoin.json&query=%24.downloads&logo=github&style=flat&color=066da5&label=pulls
