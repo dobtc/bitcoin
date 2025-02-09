@@ -25,13 +25,14 @@ Via Docker Compose:
 ```yaml
 services:
   bitcoin:
-    container_name: bitcoin
     image: dobtc/bitcoin
+    container_name: bitcoin
     ports:
       - 8332:8332
       - 8333:8333
     volumes:
       - /opt/bitcoin:/home/bitcoin/.bitcoin
+    restart: always
 ```
 
 Via Docker CLI:
