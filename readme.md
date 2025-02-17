@@ -33,6 +33,7 @@ services:
     volumes:
       - /opt/bitcoin:/home/bitcoin/.bitcoin
     restart: always
+    stop_grace_period: 1m
 ```
 
 Via Docker CLI:
