@@ -47,6 +47,8 @@ jobs:
           [[ "$latest_tag" = v* ]] && latest_tag="${latest_tag:1}"
           echo "Found tag: \"${latest_tag}\""
           echo "latest_tag=$latest_tag" >> $GITHUB_ENV
+          major="${latest_tag%%.*}"
+          echo "latest_major=$major" >> $GITHUB_ENV
       - 
         name: Check if the tag exists locally
         uses: action-pack/tag-exists@v1
@@ -134,6 +136,7 @@ jobs:
             ghcr.io/${{ github.repository }}
           tags: |
             type=raw,value=latest,priority=100,enable=${{ steps.version.outputs.target_base == steps.version.outputs.latest_release }}
+            type=raw,value=${{ env.latest_major }},enable=${{ steps.version.outputs.target_base == steps.version.outputs.latest_release }}
             type=raw,value=${{ steps.version.outputs.target_base }}
           labels: |
             org.opencontainers.image.title=${{ vars.NAME }}
