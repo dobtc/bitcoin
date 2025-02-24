@@ -47,7 +47,7 @@ jobs:
           [[ "$latest_tag" = v* ]] && latest_tag="${latest_tag:1}"
           echo "Found tag: \"${latest_tag}\""
           echo "latest_tag=$latest_tag" >> $GITHUB_ENV
-          echo "latest_version=${latest_tag%-*}" >> $GITHUB_ENV
+          latest_version="${latest_tag%-*}"
           major="${latest_version%%.*}"
           echo "latest_major=$major" >> $GITHUB_ENV
       - 
