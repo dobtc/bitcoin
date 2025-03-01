@@ -10,7 +10,7 @@ ARG DEBCONF_NONINTERACTIVE_SEEN="true"
 RUN groupadd --gid ${GID} bitcoin \
   && useradd --create-home --no-log-init -u ${UID} -g ${GID} bitcoin \
   && apt-get update -y \
-  && apt-get --no-install-recommends -y install jq curl gnupg gosu ca-certificates \
+  && apt-get --no-install-recommends -y install jq curl gnupg gosu iputils-ping ca-certificates \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
