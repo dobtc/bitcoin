@@ -31,7 +31,7 @@ services:
       - 8332:8332
       - 8333:8333
     volumes:
-      - /opt/bitcoin:/home/bitcoin/.bitcoin
+      - ./bitcoin:/home/bitcoin/.bitcoin
     restart: always
     stop_grace_period: 1m
 ```
@@ -39,7 +39,7 @@ services:
 Via Docker CLI:
 
 ```bash
-docker run -it --rm dobtc/bitcoin -printtoconsole
+docker run -it --rm --name bitcoin -v ${PWD:-.}/bitcoin:/home/bitcoin/.bitcoin dobtc/bitcoin -printtoconsole
 ```
 
 Executing `getinfo` on the running container:
