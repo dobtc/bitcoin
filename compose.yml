@@ -6,6 +6,6 @@ services:
       - 8332:8332
       - 8333:8333
     volumes:
-      - /opt/bitcoin:/home/bitcoin/.bitcoin
+      - ./bitcoin:/home/bitcoin/.bitcoin
     restart: always
     stop_grace_period: 1m
