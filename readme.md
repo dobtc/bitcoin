@@ -20,7 +20,7 @@ A docker image of Bitcoin Core with support for the following platforms:
 
 ## Usage  🐳
 
-Via Docker Compose:
+##### Via Docker Compose:
 
 ```yaml
 services:
@@ -36,13 +36,13 @@ services:
     stop_grace_period: 1m
 ```
 
-Via Docker CLI:
+##### Via Docker CLI:
 
 ```bash
 docker run -it --rm --name bitcoin -v ${PWD:-.}/bitcoin:/home/bitcoin/.bitcoin dobtc/bitcoin -printtoconsole
 ```
 
-Executing `getinfo` on the running container:
+##### Executing `getinfo` on the running container:
 
 ```bash
 docker exec --user bitcoin bitcoin bitcoin-cli -getinfo
