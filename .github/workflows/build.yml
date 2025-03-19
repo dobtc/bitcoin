@@ -138,7 +138,7 @@ jobs:
           tags: |
             type=raw,value=latest,priority=100,enable=${{ steps.version.outputs.target_base == steps.version.outputs.latest_release }}
             type=raw,value=${{ env.latest_major }},enable=${{ steps.version.outputs.target_base == steps.version.outputs.latest_release }}
-            type=raw,value=${{ steps.version.outputs.target_base }}
+            type=raw,value=${{ steps.version.outputs.target_base }},priority=250
           labels: |
             org.opencontainers.image.title=${{ vars.NAME }}
         env:
