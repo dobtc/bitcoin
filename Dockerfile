@@ -64,4 +64,6 @@ HEALTHCHECK --interval=300s --start-period=60s --start-interval=10s --timeout=20
 
 ENTRYPOINT ["/entrypoint.sh"]
 
+RUN bitcoind -version | grep "version v${BITCOIN_VERSION}"
+
 CMD ["bitcoind"]
