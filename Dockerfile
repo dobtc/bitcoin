@@ -1,3 +1,5 @@
+# syntax=docker/dockerfile:1
+
 FROM debian:bookworm-slim
 
 ARG UID=1001
