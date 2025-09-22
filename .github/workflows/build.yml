@@ -120,7 +120,7 @@ jobs:
       - 
         name: Lint Dockerfile
         if: env.exists == 'disabled'
-        uses: hadolint/hadolint-action@v3.2.0
+        uses: hadolint/hadolint-action@v3.3.0
         with:
           dockerfile: Dockerfile
           ignore: SC2207,DL3008,DL4006
