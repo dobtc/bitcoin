@@ -39,7 +39,7 @@ services:
 ##### Via Docker CLI:
 
 ```bash
-docker run -it --rm --name bitcoin -v "${PWD:-.}/bitcoin:/home/bitcoin/.bitcoin" dobtc/bitcoin -printtoconsole
+docker run -it --rm --name bitcoin -v "${PWD:-.}/bitcoin:/home/bitcoin/.bitcoin" docker.io/dobtc/bitcoin -printtoconsole
 ```
 
 ##### Executing `getinfo` on the running container:
