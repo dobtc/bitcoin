@@ -49,7 +49,7 @@ docker exec --user bitcoin bitcoin bitcoin-cli -getinfo
 ```
 
 ## Stars 🌟
-[![Stars](https://starchart.cc/dobtc/bitcoin.svg?variant=adaptive)](https://starchart.cc/dobtc/bitcoin)
+![Stargazers](https://raw.githubusercontent.com/star-stats/stars/refs/heads/data/charts/dobtc-bitcoin.svg)
 
 [build_url]: https://github.com/dobtc/bitcoin/
 [hub_url]: https://hub.docker.com/r/dobtc/bitcoin
