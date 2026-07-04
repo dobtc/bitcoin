@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM debian:bookworm-slim
+FROM debian:trixie-slim
 
 ARG PUID=1001
 ARG PGID=1001
