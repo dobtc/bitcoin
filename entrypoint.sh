@@ -1,13 +1,15 @@
 #!/bin/bash
 set -e
 
-if [ -n "${UID+x}" ] && [ "${UID}" != "0" ]; then
-  usermod -u "$UID" bitcoin
+if [ -n "${PUID:-}" ] && [ "$PUID" != "0" ]; then
+  usermod -u "$PUID" bitcoin
 fi
 
-if [ -n "${GID+x}" ] && [ "${GID}" != "0" ]; then
-  groupmod -g "$GID" bitcoin
+if [ -n "${PGID:-}" ] && [ "$PGID" != "0" ]; then
+  groupmod -g "$PGID" bitcoin
 fi
+
+[ "$#" -eq 0 ] && set -- bitcoind
 
 case "${1:-}" in
   -*)
