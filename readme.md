@@ -12,11 +12,15 @@
 
 </div></h1>
 
-A docker image of Bitcoin Core with support for the following platforms:
+Docker container for running a Bitcoin Core full node.
 
-* `amd64` (x86_64)
-* `arm32v7` (armv7)
-* `arm64` (aarch64, armv8)
+## Features ✨
+
+- Runs a Bitcoin Core full node
+- Supports amd64 and arm64 platforms
+- Exposes the JSON-RPC and peer-to-peer ports
+- Supports custom `bitcoin.conf` configuration
+- Includes `bitcoin-cli` for node management
 
 ## Usage  🐳
 
